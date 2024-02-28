@@ -3,7 +3,7 @@ import apiService from "../../../app/apiService";
 export default {
   async get(context) {
     try {
-      const { data } = await apiService.get("/api/country/get");
+      const { data } = await apiService.get("./api/country/get");
       context.commit("setCountry", data);
     } catch (error) {
       throw new Error(error.response.data);
